@@ -19,14 +19,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
+  /*682px por 404px*/
   img {
-    width: 90px;
-    height: 20px;
+    width: 100px;
+    height: 48px;
 
     @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
+      width: 200px;
+      height: 118px;
     }
   }
 }
