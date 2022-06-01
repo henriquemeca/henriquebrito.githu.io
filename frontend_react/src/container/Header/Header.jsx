@@ -5,16 +5,16 @@ import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
-  },
-};
+
+function Button({text, className, href, newTab}) {
+  return (
+    <div className={className}>
+      <a className="main-button" href={href} target={newTab && "_blank"}>
+        {text}
+      </a>
+    </div>
+  );
+}
 
 const Header = () => (
   <div className="app__header app__flex">
@@ -29,25 +29,21 @@ const Header = () => (
               >
                 <div className="app__header-badge">
                   <div className="badge-cmp app__flex">
-                    {/* <span>👋</span> */}
                     <div >
                       <h1><span className="wave-emoji">👋</span>Hello, I am Henrique ! </h1>
                       <p className="greeting-text-p">I am passionate about the impact data can have on decisions and I decided to go on a career to unlock data's full potential!</p>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-              {/* <SocialMedia /> */}
-              {/* <div className="button-greeting-div">
+              <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
-                {'google.com' && (
-                  <Button
+                <Button
                     text="See my resume"
                     newTab={true}
-                    href={'google.com'}
+                    href={'https://drive.google.com/file/d/1N99R3AP95Izwwur42yqLyocVV-uMOUNf/view?usp=sharing'}
                   />
-                )}
-              </div> */}
+              </div>
+              </motion.div>
             </div>
           </div> 
           <div className="greeting-image-div">
