@@ -21,18 +21,22 @@ const Header = () => (
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
-            <div>
-              <h1
-                className={"greeting-text"}
+            <div> 
+              <motion.div
+                whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                transition={{ duration: 0.5 }}
+                className="app__header-info"
               >
-                Henrique
-                <span className="wave-emoji">👋</span>
-              </h1>
-              <p
-                className={"greeting-text-p subTitle"}
-              >
-                hello2
-              </p>
+                <div className="app__header-badge">
+                  <div className="badge-cmp app__flex">
+                    {/* <span>👋</span> */}
+                    <div >
+                      <h1><span className="wave-emoji">👋</span>Hello, I am Henrique ! </h1>
+                      <p className="greeting-text-p">I am passionate about the impact data can have on decisions and I decided to go on a career to unlock data's full potential!</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
               {/* <SocialMedia /> */}
               {/* <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />

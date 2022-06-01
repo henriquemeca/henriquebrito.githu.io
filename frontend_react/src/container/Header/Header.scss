@@ -55,8 +55,8 @@
 .app__header-badge {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content:space-evenly;
+  align-items:center;
   flex-direction: column;
 
   .badge-cmp,
@@ -227,6 +227,7 @@
 .greeting-text-p {
   font-size: 30px;
   line-height: 40px;
+  color: #868e96;
 }
 
 .greeting-image-div > img {
