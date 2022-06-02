@@ -31,7 +31,7 @@ const Header = () => (
                   <div className="badge-cmp app__flex">
                     <div >
                       <h1><span className="wave-emoji">👋</span>Hello, I am Henrique ! </h1>
-                      <p className="greeting-text-p">I am passionate about the impact data can have on decisions and I decided to go on a career to unlock data's full potential!</p>
+                      <p className="greeting-text-p">My passion is to understand business models and build impactful Analyses.<br/> I believe that data-driven decisions can change the world.</p>
                     </div>
                   </div>
                 </div>
