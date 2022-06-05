@@ -37,18 +37,18 @@
 }
 
 .app__header-info {
-  flex: 0.65;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
 
-  margin: 0 2rem;
+  // margin: 0 2rem;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
-    margin-right: 0rem;
+    // margin-right: 0rem;
   }
 }
 
@@ -68,6 +68,16 @@
     width: auto;
 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    h1{
+      @media screen and (max-width: 450px) {
+        font-size: 1.2rem;
+      }
+    }
+    span{
+      @media screen and (max-width: 450px) {
+        font-size: 1.2rem;
+      }
+    }
   }
 
   .tag-cmp {
@@ -85,7 +95,7 @@
     font-size: 2.5rem;
 
     @media screen and (min-width: 2000px) {
-      font-size: 5rem;
+      font-size: 2rem;
     }
   }
 
@@ -196,8 +206,8 @@
 }
 
 .greet-main {
-  width: 90%;
-  padding: 20px 10px;
+  width: 100%;
+  padding: 10px 10px;
   margin: 0px auto;
   margin-top: 2rem;
 }
@@ -225,6 +235,7 @@
   font-size: 30px;
   line-height: 40px;
   color: var(--gray-color);
+  text-align: left;
 }
 
 .greeting-image-div > img {
@@ -285,7 +296,7 @@
   .greeting-text-p {
     font-size: 16px;
     line-height: normal;
-    text-align: center;
+    // text-align: center;
   }
   .greeting-main {
     display: block;
