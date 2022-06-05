@@ -23,7 +23,7 @@ const Skills = () => {
     });
   }, []);
 
-  experiences.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1)
+  experiences.sort((a, b) => (a.indexOrder > b.indexOrder) ? -1 : 1)
   
   // skills.push(skills['0'])
   // skills.push(skills['3'])
