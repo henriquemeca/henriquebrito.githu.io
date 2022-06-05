@@ -3,7 +3,7 @@ import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 
 const SocialMedia = () => (
-  <div className="app__social">
+  <div className="app__social" style={{position:'fixed',bottom: '35%',left: '0',zIndex:2}}>
     <div>
       <BsTwitter />
     </div>
