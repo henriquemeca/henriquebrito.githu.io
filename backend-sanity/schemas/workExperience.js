@@ -3,19 +3,25 @@ export default {
     title:'Work Experience',
     type:'document',
     fields:[
-           {name:'name',
-               title:'name',
+           {name:'jobtitle',
+               title:'Job Title',
                type:'string'
             },
             {
-                name:'company',
-                title:'Company',
+                name:'startdate',
+                title:'Start Date',
+                type:'string'
+            },
+            {
+                name:'enddate',
+                title:'End Date',
                 type:'string'
             },
             {
                 name:'desc',
                 title:'Desc',
-                type:'string'
+                type: "array",
+                of: [{type: "string"}]
             }
     ]
 }

@@ -4,8 +4,13 @@ export default{
     type: 'document',
     fields:[
         {
-            name:'year',
-            title:'Year',
+            name:'company',
+            title:'Company',
+            type:'string'
+        },
+        {
+            name:'Location',
+            title:'Location',
             type:'string'
         },
         {

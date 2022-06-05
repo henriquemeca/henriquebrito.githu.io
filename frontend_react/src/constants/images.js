@@ -1,4 +1,4 @@
-import email from '../assets/email.png';
+import email from '../assets/o-email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
 import cpp from '../assets/cpp.png';
