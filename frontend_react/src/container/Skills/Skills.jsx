@@ -24,31 +24,62 @@ const Skills = () => {
   }, []);
 
   experiences.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1)
-  skills.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1) 
+  
+  // skills.push(skills['0'])
+  // skills.push(skills['3'])
+  const professional = skills.filter((s)=>(s.xp ==='professional')).sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1)
+  const project = skills.filter((s)=>(s.xp ==='project')).sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1) 
+ 
   return (
     <>
       <h2 className="head-text">Skills</h2>
       <div className="app__skills-container">
-        <motion.div className="app__skills-list">
-          {skills.map((skill) => (
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="app__skills-item app__flex"
-              key={skill.name}
-            >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
-              >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
-              </div>
-              <p className="p-text">{skill.name}</p>
+        <div className='app__skills-subcontainer'>
+          <div className='app__skills-xp' >
+            <p className="bold-text app__flex">Professional experience</p>
+            <motion.div className="app__skills-list">
+              {professional.map((skill) => (
+                <motion.div
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.5 }}
+                  className="app__skills-item app__flex"
+                  key={skill.name}
+                >
+                  <div
+                    className="app__flex"
+                    style={{ backgroundColor: skill.bgColor }}
+                  >
+                    <img src={urlFor(skill.icon)} alt={skill.name} />
+                  </div>
+                  <p className="p-text">{skill.name}</p>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
-        
-      <h2 className="head-text subheader">Experiences</h2>
+          </div>
+          
+          <div  className='app__skills-xp'>
+            <p className="bold-text app__flex">Project experience</p>
+            <motion.div className="app__skills-list">
+              {project.map((skill) => (
+                <motion.div
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.5 }}
+                  className="app__skills-item app__flex"
+                  key={skill.name}
+                >
+                  <div
+                    className="app__flex"
+                    style={{ backgroundColor: skill.bgColor }}
+                  >
+                    <img src={urlFor(skill.icon)} alt={skill.name} />
+                  </div>
+                  <p className="p-text">{skill.name}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+        <h2 className="head-text subheader">Experiences</h2>
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div

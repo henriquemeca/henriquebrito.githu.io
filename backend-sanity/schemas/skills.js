@@ -19,6 +19,16 @@ export default{
             type:'number'
         },
         {
+            name:'xp',
+            title:'Experience',
+            type: 'string',
+            options: {
+              list: [
+                {title: 'Professional expecience', value: 'professional'},
+                {title: 'Project Experience', value: 'project'}
+              ]}
+        },
+        {
             name:'icon',
             title:'Icon',
             type: 'image',
