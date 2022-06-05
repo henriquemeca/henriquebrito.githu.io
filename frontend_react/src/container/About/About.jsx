@@ -16,6 +16,7 @@ const About = () => {
     });
   }, []);
 
+  abouts.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1) 
   return (
     <>
       <h2 className="head-text">“ <span>Learn</span> as if you will live forever,<br/> <span>live</span> like you will die tomorrow.”</h2>

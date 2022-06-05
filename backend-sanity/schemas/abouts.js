@@ -14,6 +14,11 @@ export default{
             type:'string'
         },
         {
+            name:'indexOrder',
+            title:'Index show order',
+            type:'number'
+        },
+        {
             name:'imgUrl',
             title:'ImgUrl',
             type: 'image',

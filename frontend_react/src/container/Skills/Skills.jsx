@@ -23,10 +23,11 @@ const Skills = () => {
     });
   }, []);
 
+  experiences.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1)
+  skills.sort((a, b) => (a.indexOrder > b.indexOrder) ? 1 : -1) 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
-
+      <h2 className="head-text">Skills</h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
@@ -46,36 +47,51 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+        
+      <h2 className="head-text subheader">Experiences</h2>
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
-              key={experience.year}
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              key={experience.company}
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
+              <div className="app__skills-exp-company">
+                <img src={urlFor(experience.imgUrl)} alt={experience.company}/>
+                <div>
+                  <span> <p className="bold-text">{experience.company}</p>
+                  <span>{", "+experience.location}</span></span>
+                  <span>{experience.desc}</span>
+                </div>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work) => (
+                {experience.works.map((works) => (
                   <>
-                    <motion.div
+                    <motion.div 
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.name}
-                      key={work.name}
+                      // data-tip
+                      // data-for={works.name}
+                      key={works.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <p className="bold-text">{works.jobtitle+' - '+
+                      works.startdate+' to '+ works.enddate}</p>
+                      <ul>
+                        {works.desc.map((d)=>(
+                          <li className="p-text">{d}</li>
+                        ))}
+                      </ul>
+                      
                     </motion.div>
                     <ReactTooltip
-                      id={work.name}
+                      id={works.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
-                      {work.desc}
+                      {works.desc}
                     </ReactTooltip>
                   </>
                 ))}
