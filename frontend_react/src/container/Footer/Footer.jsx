@@ -1,6 +1,6 @@
 import React, { useState,useRef } from 'react';
 
-import { images } from '../../constants';
+// import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 // import { client } from '../../client';
 import './Footer.scss';
@@ -24,21 +24,21 @@ const Footer = () => {
     setLoading(false);
     setIsFormSubmitted(true);
   };
-
+ 
   return (
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
-      <div className="app__footer-cards">
-        <div className="app__footer-card ">
-          <img src={images.email} alt="email" />
-          <a href="mailto:henriquebritos@hotmail.com" className="p-text">henriquebritos@hotmail.com</a>
-        </div>
-        <div className="app__footer-card">
-          <img src={images.mobile} alt="phone" />
-          <a href="tel:+55 (93) 9 9164 8755" className="p-text">+55 (93) 9 9164 8755</a>
-        </div>
-      </div>
+      {/* <div className="app__footer-cards">
+          <div className="app__footer-card ">
+            <img src={images.email} alt="email" />
+            <a href="mailto:henriquebritos@hotmail.com" className="p-text">henriquebritos@hotmail.com</a>
+          </div>
+          <div className="app__footer-card">
+            <img src={images.mobile} alt="phone" />
+            <a href="tel:+55 (93) 9 9164 8755" className="p-text">+55 (93) 9 9164 8755</a>
+          </div>
+      </div> */}
       {!isFormSubmitted ? (
         <form className="app__footer-form app__flex"  ref={form} onSubmit={sendEmail}>
           <div className="app__flex">
